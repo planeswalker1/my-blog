@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<header class="{{ page.header-class }}">
+
+</header>
+<main>
+  <nav>
+    <ul class="nav">
+      <li class="nav__item"><a href="{{ site.baseurl }}/" class="nav__link">Home</a></li>
+      <li class="nav__item"><a href="{{ site.baseurl }}/blogs/" class="nav__link">Blogs</a></li>
+      {% if page.header-class %}<li class="nav__item"><span class="blog__current">{{ page.title }}</span></li>{% endif %}
+    </ul>
+  </nav>
+  {{ content }}
+</main>

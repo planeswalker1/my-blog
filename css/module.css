@@ -1,0 +1,68 @@
+.container--home {
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 960px;
+  height: 100vh;
+}
+
+.container--404 {
+  background-color: #fff;
+  margin: 10px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.header--lanki {
+  height: 400px;
+  background: url('../images/lanki.jpg') center;
+}
+
+.header--long-beach {
+  height: 400px;
+  background: url('../images/long_beach_1280.jpg') center;
+}
+
+.header--pynell {
+  height: 400px;
+  background: url('../images/pynell.jpg') center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.nav__item {
+  margin: 0 10px;
+}
+
+.nav__link {
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.blog__current {
+  background-color: #000531;
+  color: #fff;
+}
+
+.btn__container {
+  margin-top: 10px;
+}
+
+.btn {
+  border: 3px solid black;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.btn:hover {
+  background-color: #000;
+  color: #fff;
+}

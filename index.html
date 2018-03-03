@@ -1,0 +1,19 @@
+---
+layout: default
+title-after: Hello, welcome to my blog
+---
+
+<h1>Hello, Welcome to my blog</h1>
+
+<h2>Blog Posts</h2>
+<ul>
+  {% assign sorted = site.blogs | sort: 'date' | reverse %}
+  {% for blog in sorted %}
+  {% capture this_year %}{{ blog.date | date: '%B %d, %Y' }}{% endcapture %}
+  <li>
+    <h2><a href="{{ site.baseurl }}/blogs/{{ blog.slug }}" class="nav__link">{{ blog.title }}</a>, <span>{{ this_year }}</span></h2>
+  </li>
+  {% endfor %}
+</ul>
+
+<a class="btn" href="{{ site.baseurl }}/blogs/">See More</a>

@@ -1,0 +1,15 @@
+---
+layout: blog
+title: Blogs
+header-class: header--long-beach
+---
+
+<ul>
+  {% assign sorted = site.blogs | sort: 'date' | reverse %}
+  {% for blog in sorted %}
+  {% capture this_year %}{{ blog.date | date: '%B %d, %Y' }}{% endcapture %}
+  <li>
+    <h2><a href="{{ site.baseurl }}/blogs/{{ blog.slug }}" class="nav__link">{{ blog.title }}</a>, <span>{{ this_year }}</span></h2>
+  </li>
+  {% endfor %}
+</ul>

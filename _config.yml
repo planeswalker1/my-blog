@@ -1,0 +1,8 @@
+baseurl: /my-blog
+exclude: ['README.md']
+permalink: pretty
+
+collections:
+  blogs:
+    output: true
+    permalink: /blogs/:path/
