@@ -1,17 +1,23 @@
 ---
-layout: default
+layout: not-found
 ---
 
-<header class="{{ page.header-class }}">
+<header class="header {{ page.header-class }}">
 
 </header>
 <main>
   <nav>
     <ul class="nav">
       <li class="nav__item"><a href="{{ site.baseurl }}/" class="nav__link">Home</a></li>
+      {% if page.url == '/blogs/' %}
+      <li class="nav__item"><span class="blog__current">Blogs</span></li>
+      {% else %}
       <li class="nav__item"><a href="{{ site.baseurl }}/blogs/" class="nav__link">Blogs</a></li>
-      {% if page.header-class %}<li class="nav__item"><span class="blog__current">{{ page.title }}</span></li>{% endif %}
+      {% endif %}
+      {% if page.date %}<li class="nav__item"><span class="blog__current">{{ page.title }}</span></li>{% endif %}
     </ul>
   </nav>
-  {{ content }}
+  <div class="main__blog">
+    {{ content }}
+  </div>
 </main>

@@ -1,19 +1,50 @@
 ---
 layout: default
 title-after: Hello, welcome to my blog
+container-class: container--home
 ---
+<main>
+  <div class="intro">
+    <!-- <h1>Hello, Welcome to my blog</h1> -->
+    <h1><a href="/">Daniel</a></h1>
+    <p> // Web Developer <<code>!--HTML, CSS, Javascript--</code>></p>
+  </div>
+  <div class="main__content">
+    <div class="about">
+      <h3>About</h3>
+      <p>Hi, I'm Daniel and I like to work with the web and play league of legends.</p>
+    </div>
 
-<h1>Hello, Welcome to my blog</h1>
+    <div class="blog">
+      <h3>Blog</h3>
+      <p>Here are some of my blog post</p>
+      <nav>
+        <ul>
+          {% assign sorted = site.blogs | sort: 'date' | reverse %}
+          {% for blog in sorted limit: 3 %}
+          {% capture this_year %}{{ blog.date | date: '%B %d, %Y' }}{% endcapture %}
+          <li>
+            <h4><a href="{{ site.baseurl }}/blogs/{{ blog.slug }}" class="nav__link">{{ blog.title }}</a>, <span>{{ this_year }}</span></h4>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <a class="btn" href="{{ site.baseurl }}/blogs/">See More</a>
+    </div>
 
-<h2>Blog Posts</h2>
-<ul>
-  {% assign sorted = site.blogs | sort: 'date' | reverse %}
-  {% for blog in sorted %}
-  {% capture this_year %}{{ blog.date | date: '%B %d, %Y' }}{% endcapture %}
-  <li>
-    <h2><a href="{{ site.baseurl }}/blogs/{{ blog.slug }}" class="nav__link">{{ blog.title }}</a>, <span>{{ this_year }}</span></h2>
-  </li>
-  {% endfor %}
-</ul>
+    <div class="code">
+      <h3>Coding</h3>
+      <p>You can find my work on <a class="nav__link" href="https://github.com/planeswalker1">github</a>.</p>
+      <p>Or you can check out my <a class="nav__link" href="https://planeswalker1.github.io/">portfolio</a>.</p>
+    </div>
+  </div>
 
-<a class="btn" href="{{ site.baseurl }}/blogs/">See More</a>
+  <div class="contact">
+    <h3>Contact</h3>
+    <ul>
+      <li>Github: <a class="nav__link" href="https://github.com/planeswalker1">planeswalker1</a></li>
+      <li>Email: daniel.munozdev@gmail.com</li>
+    </ul>
+  </div>
+
+</main>

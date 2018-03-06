@@ -1,0 +1,29 @@
+.container--home {
+  background-color: #fff;
+  margin: 30px auto 0 auto;
+  max-width: 960px;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container--blog {
+  background-color: #fff;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 1360px;
+}
+
+.container--404 {
+  background-color: #fff;
+  margin: 10px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
