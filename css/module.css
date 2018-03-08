@@ -25,14 +25,10 @@
   text-align: center;
 }
 
-.intro,
-.contact {
-  border-bottom: 5px solid #FF4353;
-}
-
 .intro {
-  text-align: center;
+  border-bottom: 5px solid #FF4353;
   padding-bottom: 20px;
+  text-align: center;
 }
 
 .main__content {
@@ -44,6 +40,7 @@
 }
 
 .contact {
+  border-top: 5px solid #FF4353;
   padding-top: 20px;
 }
 
